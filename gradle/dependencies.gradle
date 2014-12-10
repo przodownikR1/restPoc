@@ -46,9 +46,12 @@ dependencies {
     compile("org.apache.httpcomponents:fluent-hc:${httpClientVersion}")
 
 
-    compile("pl.java.scalatech:basicEntity:${basicEntityVersion}")
-    compile("pl.java.scalatech:serviceCommon:${serviceCommonVersion}")
+     compile("pl.java.scalatech:basicEntity:${basicEntityVersion}")
+    compile("pl.java.scalatech:basicEntity:${basicEntityVersion}:source")
+    compile("pl.java.scalatech:commonService:${serviceCommonVersion}")
+    compile("pl.java.scalatech:commonService:${serviceCommonVersion}:source")
     compile("pl.java.scalatech:restHandler:${restHandlerVersion}")
+    compile("pl.java.scalatech:restHandler:${restHandlerVersion}:source")
 
     testCompile("org.hamcrest:hamcrest-all:$hamcrestVersion")
     compile("org.mockito:mockito-all:$mockitoVersion")
