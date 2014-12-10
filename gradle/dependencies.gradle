@@ -24,7 +24,13 @@ dependencies {
     compile ("org.springframework:spring-aspects:${springVersion}")
     compile ("org.springframework:spring-webmvc:${springVersion}")
     compile ("org.springframework.data:spring-data-jpa:${springDataJPAVersion}")
+    
     compile ("javax.validation:validation-api:${javaxValidationVersion}")
+    compile ("org.hibernate:hibernate-validator:${hibernateValidatorVersion}")
+    compile ("javax.el:el-api:2.2")
+    compile ("org.glassfish.web:el-impl:2.2")
+    
+    
     compile ("com.sun.jersey:jersey-bundle:1.18")
     compile ("javax.servlet:javax.servlet-api:${servletVersion}")
     compile("org.projectlombok:lombok:${lombokVersion}")
