@@ -1,0 +1,46 @@
+buildscript {
+    ext {
+        springBootVersion = '1.1.9.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: "java"
+apply plugin: "maven"
+apply from: "gradle/dependencies.gradle"
+//apply from: "gradle/report.gradle"
+apply from: "gradle/assembler.gradle"
+apply from: "gradle/release.gradle"
+apply from: "gradle/sonar.gradle"
+
+sourceCompatibility = 1.8
+
+jar {
+    baseName = 'restPoc'
+    version = '0.1.0'
+}
+
+sourceSets {
+    intTest
+    
+    main {
+        java { srcDir 'src/main/java' }
+        resources { srcDir 'src/main/resources' }
+    }
+    test {
+        java { srcDir 'src/test/java' }
+        resources { srcDir 'src/test/resources' }
+    }
+}
+uploadArchives {
+    repositories {
+        flatDir { dirs 'repos' }
+    }
+}
+
+task wrapper(type: Wrapper) { }
