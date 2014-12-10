@@ -3,10 +3,9 @@ package pl.java.scalatech.domain;
 import javax.persistence.Entity;
 import javax.persistence.Version;
 
-import pl.java.scalatech.entity.common.EntityCommon;
-import pl.java.scalatech.entity.common.PKEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import pl.java.scalatech.entity.common.EntityCommon;
 
 @Data
 @EqualsAndHashCode(callSuper=false)

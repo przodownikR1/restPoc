@@ -11,15 +11,11 @@ repositories {
 }
 
 dependencies {
-    
+    compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-aop:${springBootVersion}")
     compile("org.springframework.boot:spring-boot-starter-data-jpa:${springBootVersion}")
-    
-    
-    compile("org.springframework.boot:spring-boot-starter-data-jpa:${springBootVersion}")
     compile("org.springframework.boot:spring-boot-starter-logging:${springBootVersion}")
-    
-    
+    compile("org.springframework.boot:spring-boot-starter-security")
     compile ("org.springframework:spring-core:${springVersion}")
     compile ("org.springframework:spring-beans:${springVersion}")
     compile ("org.springframework:spring-context:${springVersion}")
@@ -35,19 +31,19 @@ dependencies {
     compile("com.google.guava:guava:${guavaVersion}")
     compile ("com.jayway.restassured:rest-assured:2.3.3")
     compile ("com.jayway.jsonpath:json-path:0.9.1")
-    
-    
+
+
     compile("org.slf4j:slf4j-api:$slf4jVersion")
     runtime("ch.qos.logback:logback-classic:$logbackVersion")
     compile("ch.qos.logback:logback-core:$logbackVersion")
     compile("org.apache.httpcomponents:httpclient:${httpClientVersion}")
     compile("org.apache.httpcomponents:fluent-hc:${httpClientVersion}")
-    
-    
+
+
     compile("pl.java.scalatech:basicEntity:${basicEntityVersion}")
     compile("pl.java.scalatech:serviceCommon:${serviceCommonVersion}")
     compile("pl.java.scalatech:restHandler:${restHandlerVersion}")
-    
+
     testCompile("org.hamcrest:hamcrest-all:$hamcrestVersion")
     compile("org.mockito:mockito-all:$mockitoVersion")
     testCompile("junit:junit:$junitVersion")
@@ -55,6 +51,24 @@ dependencies {
     testCompile("org.easytesting:fest-assert:${festAssertVersion}")
     testCompile ("org.springframework:spring-test:${springVersion}")
     testCompile ("org.spockframework:spock-core:0.7-groovy-2.0")
-     
-
 }
+
+
+configurations {
+    all {
+        resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+        exclude group: "commons-logging"
+        exclude module: "slf4j-log4j12"
+        exclude module: "hibernate-jpa-2.0-api"
+    }
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        if (details.requested.group == 'org.springframework') {
+            details.useVersion '4.1.0.RELEASE'
+        }
+    }
+}
+
+

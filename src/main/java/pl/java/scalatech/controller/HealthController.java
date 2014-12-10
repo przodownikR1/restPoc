@@ -16,12 +16,6 @@ import com.google.common.base.Joiner;
 import com.google.common.collect.Lists;
 
 
-/**
- * @author Sławomir Borowiec 
- * Module name : bootSetting
- * Creating time :  17 wrz 2014 09:49:43
- 
- */
 @RestController
 @Slf4j
 
