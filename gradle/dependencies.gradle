@@ -45,11 +45,11 @@ dependencies {
     compile("org.apache.httpcomponents:httpclient:${httpClientVersion}")
     compile("org.apache.httpcomponents:fluent-hc:${httpClientVersion}")
 
-
     compile("pl.java.scalatech:basicEntity:${basicEntityVersion}")
     compile("pl.java.scalatech:commonService:${serviceCommonVersion}")
     compile("pl.java.scalatech:restHandler:${restHandlerVersion}")
     runtime("org.hsqldb:hsqldb:${hsqldbVersion}")
+
     testCompile("org.hamcrest:hamcrest-all:$hamcrestVersion")
     compile("org.mockito:mockito-all:$mockitoVersion")
     testCompile("junit:junit:$junitVersion")
