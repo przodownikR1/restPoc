@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Import;
  
 @Configuration
 @ComponentScan(basePackages="pl.java.scalatech.config",useDefaultFilters=false,includeFilters={@Filter(Configuration.class)})
-@Import(value={ServiceConfig.class,RestConfig.class})
+@Import(value={ServiceConfig.class,RestConfig.class,WebSecurityConfig.class})
 public class AppConfig {
 
 }
