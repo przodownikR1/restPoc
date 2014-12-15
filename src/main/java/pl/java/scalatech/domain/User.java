@@ -18,7 +18,7 @@ import pl.java.scalatech.entity.common.EntityCommon;
 @Entity
 @ToString(callSuper=true)
 @Builder
-public class User extends EntityCommon<Long>{
+public class User extends EntityCommon{
 
     private static final long serialVersionUID = -6567709458397827407L;
     private String name;

@@ -12,7 +12,7 @@ import pl.java.scalatech.service.common.impl.PaginationAbstactService;
 
 @Service
 @Transactional(readOnly = true)
-public class UserServiceImpl extends PaginationAbstactService<User, Long> implements UserService {
+public class UserServiceImpl extends PaginationAbstactService<User> implements UserService {
 
     @Autowired
     private final UserRepository userRepository;

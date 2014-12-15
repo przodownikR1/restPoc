@@ -1,6 +1,5 @@
 package pl.java.scalatech.repository;
 
-import java.io.Serializable;
 import java.util.Map;
 
 import javax.persistence.EntityManager;
@@ -22,7 +21,7 @@ import pl.java.scalatech.entity.common.PKEntity;
 @Repository
 @Slf4j
 @NoArgsConstructor
-public class UserSpecificRepositoryImpl<T extends PKEntity<K>,K extends Serializable> implements UserSpecificRepository<T,K>{
+public class UserSpecificRepositoryImpl<T extends PKEntity> implements UserSpecificRepository<T>{
     
     private  Class<T> type = null;
 

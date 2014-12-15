@@ -10,7 +10,7 @@ import pl.java.scalatech.entity.common.EntityCommon;
 @Data
 @EqualsAndHashCode(callSuper=false)
 @Entity
-public class Book extends EntityCommon<Long> {
+public class Book extends EntityCommon {
     /**
      * 
      */

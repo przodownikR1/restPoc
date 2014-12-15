@@ -48,6 +48,7 @@ dependencies {
     compile("pl.java.scalatech:basicEntity:${basicEntityVersion}")
     compile("pl.java.scalatech:commonService:${serviceCommonVersion}")
     compile("pl.java.scalatech:restHandler:${restHandlerVersion}")
+    compile("pl.java.scalatech:jpaPlugin:${jpaPluginVersion}")
     runtime("org.hsqldb:hsqldb:${hsqldbVersion}")
 
     testCompile("org.hamcrest:hamcrest-all:$hamcrestVersion")

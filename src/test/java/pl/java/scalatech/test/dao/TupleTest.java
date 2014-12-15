@@ -12,18 +12,18 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import pl.java.scalatech.config.BasicDsConfig;
+import pl.java.scalatech.config.DsConfig;
 import pl.java.scalatech.domain.User;
 import pl.java.scalatech.repository.UserRepository;
 import pl.java.scalatech.repository.UserSpecificRepository;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = { BasicDsConfig.class })
+@SpringApplicationConfiguration(classes = { DsConfig.class })
 @ActiveProfiles(profiles = "dev,cache")
 @Slf4j
 public class TupleTest {
     @Autowired
-    private UserSpecificRepository userSpecificRepository;
+    private UserSpecificRepository<?> userSpecificRepository;
     @Autowired
     private UserRepository userRepository;
     

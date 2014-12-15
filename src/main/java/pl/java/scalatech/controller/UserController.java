@@ -25,7 +25,7 @@ import pl.java.scalatech.service.UserService;
 @RestController
 @RequestMapping(value = UserController.API, produces = { MediaType.APPLICATION_JSON_VALUE })
 @Slf4j
-public class UserController extends CrudController<User,Long> {
+public class UserController extends CrudController<User> {
     protected static final String API = "/api/user";
     
     // private final PagedResourcesAssembler<User> pagedResourcesAssembler;
