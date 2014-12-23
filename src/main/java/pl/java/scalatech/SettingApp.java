@@ -22,7 +22,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.stereotype.Service;
 
 import pl.java.scalatech.config.AppConfig;
-import pl.java.scalatech.domain.User;
+import pl.java.scalatech.entity.User;
 import pl.java.scalatech.service.UserService;
 
 
@@ -31,7 +31,7 @@ import pl.java.scalatech.service.UserService;
 @EnableAsync
 @Slf4j
 public class SettingApp extends SpringBootServletInitializer{
-    private static final String DEV = "dev";
+    private static final String DEV = "test";
 
     @Autowired
     private UserService userService;

@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 import lombok.extern.slf4j.Slf4j;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,15 +13,16 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import pl.java.scalatech.config.DsConfig;
-import pl.java.scalatech.domain.User;
+import pl.java.scalatech.config.JpaEmbeddedConfig;
+import pl.java.scalatech.entity.User;
 import pl.java.scalatech.repository.UserRepository;
 import pl.java.scalatech.repository.UserSpecificRepository;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = { DsConfig.class })
-@ActiveProfiles(profiles = "dev,cache")
+@SpringApplicationConfiguration(classes = { JpaEmbeddedConfig.class })
+@ActiveProfiles(profiles = "test,cache")
 @Slf4j
+@Ignore
 public class TupleTest {
     @Autowired
     private UserSpecificRepository<?> userSpecificRepository;

@@ -1,4 +1,4 @@
-package pl.java.scalatech.domain;
+package pl.java.scalatech.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Version;

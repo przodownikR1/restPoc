@@ -9,7 +9,7 @@ import java.util.Locale;
 import org.springframework.hateoas.mvc.ResourceAssemblerSupport;
 
 import pl.java.scalatech.controller.UserController;
-import pl.java.scalatech.domain.User;
+import pl.java.scalatech.entity.User;
 
 public class UserAssembler extends ResourceAssemblerSupport<User, UserResource> {
 

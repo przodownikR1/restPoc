@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.MockitoAnnotations;
@@ -30,6 +31,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON;
 @ContextConfiguration(classes = { AppConfig.class })
 @WebAppConfiguration
 @Slf4j
+@Ignore
 public class FileControllerTest {
 
     private MockMvc mockMvc;

@@ -1,6 +1,6 @@
 package pl.java.scalatech.service;
 
-import pl.java.scalatech.domain.User;
+import pl.java.scalatech.entity.User;
 import pl.java.scalatech.service.common.PaginationService;
 
 

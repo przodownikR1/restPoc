@@ -37,7 +37,13 @@ dependencies {
     compile("com.google.guava:guava:${guavaVersion}")
     compile ("com.jayway.restassured:rest-assured:2.3.3")
     compile ("com.jayway.jsonpath:json-path:0.9.1")
-
+    
+    compile("com.codahale.metrics:metrics-core:${codahale}")
+    compile("com.codahale.metrics:metrics-jvm:${codahale}")
+    compile("com.codahale.metrics:metrics-logback:${codahale}")
+    compile("com.ryantenney.metrics:metrics-spring:3.0.1")
+    compile("com.codahale.metrics:metrics-servlet:${codahale}")
+    compile("com.codahale.metrics:metrics-servlets:${codahale}")
 
     compile("org.slf4j:slf4j-api:$slf4jVersion")
     runtime("ch.qos.logback:logback-classic:$logbackVersion")
@@ -50,7 +56,10 @@ dependencies {
     compile("pl.java.scalatech:restHandler:${restHandlerVersion}")
     compile("pl.java.scalatech:jpaPlugin:${jpaPluginVersion}")
     runtime("org.hsqldb:hsqldb:${hsqldbVersion}")
-
+    
+    compile("com.h2database:h2:${h2Version}")
+    compile "com.zaxxer:HikariCP:${hikariCPVersion}"
+    
     testCompile("org.hamcrest:hamcrest-all:$hamcrestVersion")
     compile("org.mockito:mockito-all:$mockitoVersion")
     testCompile("junit:junit:$junitVersion")

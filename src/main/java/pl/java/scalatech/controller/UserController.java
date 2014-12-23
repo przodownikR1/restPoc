@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import pl.java.scalatech.assembler.UserAssembler;
 import pl.java.scalatech.assembler.UserResource;
-import pl.java.scalatech.domain.User;
+import pl.java.scalatech.entity.User;
 import pl.java.scalatech.rest.dto.ApiError;
 import pl.java.scalatech.service.UserService;
 

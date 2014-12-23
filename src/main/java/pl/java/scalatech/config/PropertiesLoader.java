@@ -10,7 +10,8 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 @Configuration
 @PropertySource("classpath:server.properties")
-@Profile("dev")
+//@PropertySource("classpath:spring-data.properties")
+@Profile("test")
 @Slf4j
 public class PropertiesLoader {
    

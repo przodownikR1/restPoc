@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import pl.java.scalatech.domain.User;
+import pl.java.scalatech.entity.User;
 
 /**
  * @author Sławomir Borowiec 

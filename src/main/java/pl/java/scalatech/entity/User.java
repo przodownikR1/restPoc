@@ -1,4 +1,4 @@
-package pl.java.scalatech.domain;
+package pl.java.scalatech.entity;
 
 import java.math.BigDecimal;
 

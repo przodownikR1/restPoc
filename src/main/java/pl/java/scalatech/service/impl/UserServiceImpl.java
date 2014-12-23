@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import pl.java.scalatech.domain.User;
+import pl.java.scalatech.entity.User;
 import pl.java.scalatech.repository.UserRepository;
 import pl.java.scalatech.service.UserService;
 import pl.java.scalatech.service.common.impl.PaginationAbstactService;

@@ -12,7 +12,7 @@ info:
          
 spring:
          profiles :
-                   active: dev
+                   active: test
                            
 simple :
          name : przodownik
